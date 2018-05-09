@@ -2,6 +2,12 @@
 ### a jsonrpc 2.0 server to handle requests from misfit
 ---
 
+## About
+this jsonrpc server handles requests from the misfit bot as a midway between the bot and blizzards API. The idea is to utilize this application in conjunction with misfit but to offload some of the computational tasks of the bot onto another application.
+
+At a high level:
+``` user(issues command) -> misfit(bundles request as json, sends request to backbone) -> backbone(request data from blizzard, calculate, return result) -> misfit(catch result request, display) -> user(is happy)```
+
 ### Important Links
 * [jsonrpc Specification](http://www.jsonrpc.org/specification) - *specification this project follows*
 * [misfit](https://github.com/Sadin/misfit) - *bot that will regularly make calls to this service*
